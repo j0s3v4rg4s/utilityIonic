@@ -23,6 +23,7 @@ $ npm install firebase --save
 *   In your Ionic proyect, inside of src folder, create a folder with the name providers
 *   Copy inside providers folder the comun-service.ts and firebase-service.ts files
 *   open `./src/app/app.module.ts` and import the services
+
     ```typescript
     ...
     import { ComunService } from '../providers/comun-service';
@@ -31,6 +32,7 @@ $ npm install firebase --save
     providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, ComunService,FirebaseService]
     ```
 *   In the page that you need use the library import the respective services
+
     ```typescript
     ...
     import { ComunService } from '../../providers/comun-service'
@@ -42,4 +44,5 @@ $ npm install firebase --save
 
 ## Documentation
 [Ionic](http://ionicframework.com/) page
+
 [Firebase](https://firebase.google.com/docs/server/setup) page
