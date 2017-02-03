@@ -69,4 +69,32 @@ export class ComunService {
             });
         })
     }
+
+    /**
+     * Muestra una ventana de confirmación
+     * @param {string} title Titulo de la ventana
+     * @param {string} msg Mensaje de la ventana
+     * @param {string} name1 Nombre del primer boton de 
+     * @param {()=> any} acc1 Accion del primer boton
+     * @param {string} name2 Nombre del segundo boton
+     * @param {()=> any} acc2 Accion del segundo boton
+     * @memberOf ComunService
+     */
+    showConfirm(title: string, msg: string, name1: string, acc1: () => any, name2: string, acc2: () => any) {
+        let confirm = this.alertCtrl.create({
+            title: title,
+            message: msg,
+            buttons: [
+                {
+                    text: name1,
+                    handler: acc1
+                },
+                {
+                    text: name2,
+                    handler: acc2
+                }
+            ]
+        });
+        confirm.present();
+    }
 }
